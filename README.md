@@ -1,4 +1,4 @@
-# Basic question
+## Basic question
 
 #### What is KMS , and KMS can handle which problems?
 
@@ -18,3 +18,32 @@
 - ...
 
 ## Scripts
+- Create Key
+  ```shell
+  ./auto/create-key.sh <description>
+  ```
+- Encrypt plain text
+  ```shell
+  ./auto/encrypt.sh <key-id> <plain-text>
+  ```
+- Decrypt ciphertext
+  ```shell
+  ./auto/decrypt.sh <ciphertext>
+  ```
+- Use shush to encrypt or decrypt
+  
+  **Install shush:**
+  
+  Mac - run `brew install shush`.
+  
+  Windows/Linux - see [Shush Installation](https://github.com/realestate-com-au/shush#installation)
+
+  - Encrypt
+    ```shell
+    ./auto/shush.sh encrypt <key-id> <plain-text>
+    ```
+  - Decrypt
+    ```shell
+    ./auto/shush.sh decrypt <ciphertext>
+    ```
+  The result will be stored in `secret.encrypted` and `secret.decrypted` file.
